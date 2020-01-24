@@ -4,6 +4,7 @@ require 'sinatra/reloader'
 require 'pry'
 require 'pg'
 require 'bcrypt' #restart server when you install new gem
+require_relative 'models/dish.rb'
 enable :sessions #sinatra feature-abstraction -it like the global variable that you can write to, means empty hash we are going to write in
 # you will get a hash named session
 
