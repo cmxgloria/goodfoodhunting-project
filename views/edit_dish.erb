@@ -1,0 +1,10 @@
+<h1>Edit dish</h1>
+<form action="/dishes/<%= @dish['id'] %>" method="post">
+<%# sinatra support patch, change to post %>
+  <input type="hidden" name ="_method" value="patch">
+  <label for="">name</label>
+  <input type="hidden" name ="name" value="<%= @dish['name']%>">
+  <label for="">image url</label>
+  <input type="text" name="image_url" value="<%= @dish['image_url']%>">
+  <button>Update</button>
+</form>

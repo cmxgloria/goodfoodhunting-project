@@ -1,0 +1,12 @@
+<h1>goodfoodhunting</h1>
+
+<% @results.each do |dish| %>
+<img src="<%= dish['image_url']%>" alt="">
+<h2>
+<a href="/dishes/<%= dish['id'] %>">
+<%= dish['name'] %>
+</a>
+</h2>
+<% end %>
+
+<%# do and end we separate, cause we need to put function inside to run before we return do-end %>

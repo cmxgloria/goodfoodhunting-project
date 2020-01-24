@@ -1,0 +1,11 @@
+<h1> <%= @dish['name'] %> details </h1>
+<%# <a href="">delete</a> this a tag is get request , dont use for delete%>
+<%# post to replace delete %>
+<a href="/dishes/<%= @dish['id'] %>/edit">Edit</a>
+<form action="/dishes/<%= @dish['id'] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>delete</button>
+</form>
+
+
+

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<%# if session to deal with when we logout, then logout button will be gone %>
+<% if logged_in? %>
+<%= current_user['email'] %>
+  <form action="/session" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>logout</button>
+  </form>
+<% end %>
+<nav>
+<a href="/">home</a>
+<a href="/dishes/new">post new dish</a>
+<a href="/my_dishes">my dishes</a>
+</nav>
+  <%= yield %>
+</body>
+</html>
