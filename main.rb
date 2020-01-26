@@ -20,7 +20,7 @@ end
 def current_user
   # sql injection to protect
   # conn.exec_params("select * from users where id = $1", "drop table table")
-  # concept of pg, avoid user input some sql method to drop table or update invaliate
+  # concept of pg, avoid user input some sql method to drop table or update invaliadte
   run_sql("select * from users where id = #{session[:user_id]};")[0]
   # [{'id=>1,'email'=>hldhl@hotmail.com,'password'=>'gkhgkh'}]
 end

@@ -13,7 +13,7 @@ def create_dish(name, image_url,user_id)
     # another way if got more lines, can seperate like this
     sql = <<~ SQL 
     insert into dishes (name, image_url,user_id)
-    values ($1, $2, $3});
+    values ($1, $2, $3);
     # $1,2,3 is kinds of variables
     SQL
     run_sql(sql,[name, image_url, user_id])
