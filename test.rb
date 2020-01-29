@@ -10,4 +10,4 @@ sql = "INSERT INTO users(email, password_digest) VALUES ('#{email}','#{digest_pa
 conn.exec(sql)
 conn.close
 
-# dont run this one twice, otherwise, it generates another password, then when login, email can not match 2 passwords,
+# we have to run in terminal ruby test.rb then generate the digest password that we can use to login dont run this one twice, otherwise, it generates another password, then when login, email can not match 2 passwords,

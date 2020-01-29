@@ -11,7 +11,7 @@ def create_dish(name, image_url,user_id)
     # sql += "values ('#{params[:name]}', '#{params[:image_url]}', #{current_user[:user_id]});"
 
     # another way if got more lines, can seperate like this
-    sql = <<~ SQL 
+    sql = <<~SQL 
     insert into dishes (name, image_url,user_id)
     values ($1, $2, $3);
     # $1,2,3 is kinds of variables
