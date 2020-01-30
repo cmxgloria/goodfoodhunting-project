@@ -79,7 +79,7 @@ end
 post '/dishes' do
   redirect '/login' unless logged_in?
   # conn = PG.connect(dbname: 'goodfoodhunting')
-  sql = "insert into dishes (name, image_url,user_id) values ('#{params[:name]}', '#{params[:image_url]}', #{current_user[:user_id]});"
+  sql = "insert into dishes (name, image_url,user_id) values ('#{params[:name]}', '#{params[:image_url]}', #{current_user[:id]});"
   # conn.exec(sql)
   # conn.close
   run_sql(sql)
