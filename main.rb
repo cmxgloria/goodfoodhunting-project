@@ -79,7 +79,7 @@ end
 post '/dishes' do
   redirect '/login' unless logged_in?
   # conn = PG.connect(dbname: 'goodfoodhunting')
-  sql = "insert into dishes (name, image_url,user_id) values ('#{params[:name]}', '#{params[:image_url]}', #{current_user[:id]});"
+  sql = "insert into dishes (name, image_url,user_id) values ('#{params[:name]}', '#{params[:image_url]}');"
   # conn.exec(sql)
   # conn.close
   run_sql(sql)
@@ -107,7 +107,7 @@ end
 # update
 patch '/dishes/:id' do
   # conn = PG.connect(dbname: 'goodfoodhunting')
-  sql = "update * from dishes set name = '#{params[:name]}', image_url = '#{params[:image_url]}' where id = #{params [:id]};"
+  sql = "update dishes set name = '#{params[:name]}', image_url = '#{params[:image_url]}' where id = #{params [:id]};"
   # raise sql this stop and show the return
   # conn.exec(sql)
   # conn.close
